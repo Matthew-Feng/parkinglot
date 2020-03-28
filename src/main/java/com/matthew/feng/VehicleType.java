@@ -1,6 +1,6 @@
 package com.matthew.feng;
 
-public enum  SpotSize {
+public enum VehicleType {
     SMALL,
     MEDIUM,
     LARGE

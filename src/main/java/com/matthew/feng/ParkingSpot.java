@@ -1,26 +1,20 @@
 package com.matthew.feng;
 
+import java.util.Set;
+
 public class ParkingSpot {
-    private SpotSize spotSize;
-    private int no;
+    private int spotNo;
     private int level;
     private Vehicle vehicle;
     private int distance;
-    
-    public SpotSize getSpotSize() {
-        return spotSize;
+    private Set<VehicleType> suitableFor;
+
+    public int getSpotNo() {
+        return spotNo;
     }
 
-    public void setSpotSize(SpotSize spotSize) {
-        this.spotSize = spotSize;
-    }
-
-    public int getNo() {
-        return no;
-    }
-
-    public void setNo(int no) {
-        this.no = no;
+    public void setSpotNo(int spotNo) {
+        this.spotNo = spotNo;
     }
 
     public int getLevel() {
@@ -38,9 +32,9 @@ public class ParkingSpot {
     public void parkVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
-    
-    public void vacate(){
-        this.vehicle = vehicle;
+
+    public void vacate() {
+        this.vehicle = null;
     }
 
     public int getDistance() {
@@ -55,4 +49,11 @@ public class ParkingSpot {
         return vehicle == null;
     }
 
+    public Set<VehicleType> getSuitableFor() {
+        return suitableFor;
+    }
+
+    public void setSuitableFor(Set<VehicleType> suitableFor) {
+        this.suitableFor = suitableFor;
+    }
 }

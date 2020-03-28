@@ -1,8 +1,10 @@
 package com.matthew.feng;
 
 public class Car extends Vehicle {
+
     @Override
-    public SpotSize getSpotSize() {
-        return SpotSize.MEDIUM;
+    public VehicleType getVehicleType() {
+        return VehicleType.MEDIUM;
     }
+
 }
